@@ -3,15 +3,17 @@ import { Dispatch, SetStateAction, useId } from "react";
 function InputPassword({
   password,
   setPassword,
+  labelName,
 }: {
   password: string;
   setPassword: Dispatch<SetStateAction<string>>;
+  labelName: string;
 }) {
   const id = useId();
   return (
     <div className="flex flex-col gap-y-1.5 w-full">
       <label htmlFor={id} className="text-gray-700">
-        비밀번호
+        {labelName}
       </label>
       <input
         id={id}

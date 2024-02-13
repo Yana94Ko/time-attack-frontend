@@ -10,7 +10,11 @@ function LoginModal() {
   return (
     <Modal title="로그인">
       <InputEmail email={email} setEmail={setEmail} />
-      <InputPassword password={password} setPassword={setPassword} />
+      <InputPassword
+        password={password}
+        setPassword={setPassword}
+        labelName="비밀번호"
+      />
       <button className="bg-black text-white w-full h-14 my-4">
         로그인하기
       </button>
