@@ -8,6 +8,6 @@ export async function getProducts() {
   return data as Product[];
 }
 
-const products = { getProducts };
+const productsAPI = { getProducts };
 
-export default products;
+export default productsAPI;

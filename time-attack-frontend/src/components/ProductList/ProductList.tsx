@@ -7,7 +7,7 @@ import ProductListItem from "../ProductListItem";
 function ProductList() {
   const returnValueOfUseQuery = useQuery({
     queryKey: ["products", { isList: true, type: "default" }],
-    queryFn: API.products.getProducts,
+    queryFn: API.productsAPI.getProducts,
   });
   const { data: products, isLoading } = returnValueOfUseQuery;
   return (
