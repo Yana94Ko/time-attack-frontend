@@ -22,6 +22,5 @@ export const useUtil = () => useContext(UtilContext);
 export function UtilProvider({ children }: { children: React.ReactNode }) {
   const [modal, setModal] = useState<React.ReactElement>(<></>);
   const value: UtilContextValue = { modal, setModal };
-  console.log(modal);
   return <UtilContext.Provider value={value}>{children}</UtilContext.Provider>;
 }
