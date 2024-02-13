@@ -3,7 +3,7 @@ import ProductList from "@/components/ProductList";
 
 export default function Home() {
   return (
-    <Page title="Trending">
+    <Page title="Trending" fullWidth>
       <ProductList />
     </Page>
   );
