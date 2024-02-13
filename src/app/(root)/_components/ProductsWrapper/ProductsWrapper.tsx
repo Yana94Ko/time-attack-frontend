@@ -10,11 +10,17 @@ function ProductsWrapper({ brandId }: { brandId: number }) {
   });
 
   return (
-    <ProductList
-      products={
-        products?.filter((products) => products.brand.id === brandId) || []
-      }
-    />
+    <>
+      {!brandId ? (
+        <ProductList products={products || []} />
+      ) : (
+        <ProductList
+          products={
+            products?.filter((products) => products.brand.id === brandId) || []
+          }
+        />
+      )}
+    </>
   );
 }
 

@@ -25,6 +25,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (isLoggedIn) {
       router.replace("/");
     }
-  });
+  }, [isLoggedIn]);
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
