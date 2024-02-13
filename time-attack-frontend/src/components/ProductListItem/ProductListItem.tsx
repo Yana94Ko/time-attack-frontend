@@ -1,9 +1,24 @@
-import { Product } from "@/types/Product.type";
 import utils from "@/utils/utils";
 import Image from "next/image";
 import Link from "next/link";
-
-function ProductListItem({ product }: { product: Product }) {
+interface ProductListItemProps {
+  product: {
+    id: number;
+    name: string;
+    imgSrc: string;
+    onlineStock: number;
+    price: number;
+    originalPrice: number;
+    deliveryType: string;
+    brandId: number;
+    brand: {
+      id: number;
+      nameKr: string;
+      nameEn: string;
+    };
+  };
+}
+function ProductListItem({ product }: ProductListItemProps) {
   return (
     <Link
       href={`/products/${product.id}`}
@@ -14,6 +29,7 @@ function ProductListItem({ product }: { product: Product }) {
           src={product.imgSrc}
           alt={product.name}
           fill
+          loading="lazy"
           objectPosition="absolute"
           className="object-cover group-hover:scale-105 transition-transform"
         />

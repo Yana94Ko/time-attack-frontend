@@ -1,10 +1,10 @@
 import Page from "@/components/Page";
-import ProductList from "@/components/ProductList";
+import ProductsWrapper from "./_components/ProductsWrapper";
 
 export default function Home() {
   return (
     <Page title="Trending" fullWidth>
-      <ProductList />
+      <ProductsWrapper />
     </Page>
   );
 }
